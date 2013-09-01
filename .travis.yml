@@ -1,0 +1,9 @@
+language: perl
+perl:
+  - "5.18"
+  - "5.16"
+  - "5.14"
+install: cpanm --with-develop --installdeps --notest .
+after_success:
+  - cover -report coveralls
+
